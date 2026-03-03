@@ -1,0 +1,44 @@
+package Aula03_03032026;
+import java.util.Scanner;
+import java.math.*;
+
+public class AdivinheONumero {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+
+        int partida = 0;
+
+        System.out.println("---APP Adivinhe o Numero!---");
+
+    // (int)( Math.random() * (max - min + 1) + min )
+        
+        System.out.println("Vamos jogar!");
+        int min;
+        int max;
+        int vidas = 3;
+        double numeroSecreto = (int) ( Math.random() * (max - min + 1) + min);
+
+        System.out.println("Partida nº: " + partida);
+        
+        System.out.println("Escolha um numero (int): ");
+        int n_jogador = leitor.nextInt();
+        
+        while (vidas > 0 && numeroSecreto != n_jogador) {
+            System.out.println("Voce tem: " + vidas + "vidas");
+            if(numeroSecreto > n_jogador) {
+            System.out.println("Um pouco mais");
+            vidas -= 1; 
+        } else if (numeroSecreto == n_jogador){
+            System.out.println("Acertou!");
+        } else 
+        System.out.println("Um pouco menos");
+            vidas -= 1;
+        }
+
+        
+
+        
+
+
+    }
+}
