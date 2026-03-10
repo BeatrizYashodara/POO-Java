@@ -1,0 +1,29 @@
+import java.time.LocalDate;
+import java.time.Period;
+
+public class Pessoa {
+    String nome;
+    String cpf;
+    double altura;
+    double peso;
+    Pessoa mae;
+    Pessoa pai;
+    LocalDate nascimento;
+
+    int getIdade() { 
+        LocalDate dataAtual = LocalDate.now();
+        Period periodo = Period.between (nascimento, dataAtual);
+        return periodo.getYears();
+    }
+
+    /* NullPointerException eh qnd n tem instanciacao, pq o java armazena objetos usando ponteiros */
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa();
+        pessoa.nome = "Beatriz";
+        pessoa.cpf = "123.456.789-00";
+        pessoa.altura = 1.58;
+        pessoa.peso = 58.5;
+        pessoa.nascimento = LocalDate.of(2002, 8, 8);
+        System.out.println("Idade: " + pessoa.getIdade());
+    }
+}
