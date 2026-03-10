@@ -1,0 +1,23 @@
+package br.gov.sp.fatec.pg.oo;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        /*
+        Data hoje = new Data();
+        hoje.dia = 10;
+        hoje.mês = 03;
+        hoje.ano = 2026;
+        System.out.println(" Hoje é " + hoje.dia + "/" + hoje.mês + "/" + hoje.ano);
+
+        Data meu_nascimento = new Data();
+        meu_nascimento.dia = 8;
+        meu_nascimento.mês = 8;
+        meu_nascimento.ano = 2002;
+        */
+
+        Horario agora = new Horario();
+        agora.horas = 14;
+        agora.minutos = 50;
+        agora.segundos = 0; 
+    }
+}
