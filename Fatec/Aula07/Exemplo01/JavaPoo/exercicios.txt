@@ -1,0 +1,22 @@
+01 - aplicar try-catch e exceções personalizadas em um validador de formulário 
+Objetivo: Aplicar try-catch e exceções personalizadas em um validador de formulário.
+Enunciado: 
+  - crie classes de exceção: EmailInvalidoException e IdadeInvalidaException
+  - crie uma classe ValidadorUsuario com método validar (String email, int idade) que lança exceções se inválido (email sem '@', idade < 0).
+  - Na App, use a classe Scanner para coletar dados, e use try-catch para capturar e imprimir mensagens amigáveis.
+  - Teste com dados válidos e inválidos.
+Dica para fixar: Integre com encapsulamento da aula 04 - use getters/setters na classe Usuario
+
+02 - aplicar strategy em um processador de arquivos
+Objetivo: Refatorar um leitor de arquivos usando Strategy para tratar exceções de forma intercambiável.
+Enunciado: 
+  - crie interface EstrategiaRecuperacao com recuperar(IOException e).
+  - implementações: RetryRecuperacao(tenta 3x) e AbortRecuperacao (para e loga).
+  - Classe ProcessadorArquivo que usa estratégia no try-catch.
+  - Na App, teste com arquivo inexistente, alternando estratégias.
+
+Pense no Strategy como um "Plano B flexível"
+1. se uma falha, mude de tática sem drama!
+
+03 - CAIXA ELETRONICO (o mesmo de antes)
+Objetivo: Consolidar com conceitos anteriores (herança da aula 06)
