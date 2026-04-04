@@ -1,6 +1,32 @@
 public class Horario {
 
 /*
+	Tarefa 03
+
+● No mesmo projeto:
+○ Crie na classe Horario:
+■ Um construtor sem parâmetros que inicialize o objeto com
+00:00:00
+■ Um construtor parametrizado que inicialize o objeto com os
+valores de horas, min e seg informados nos parâmetros
+■ Use os métodos set ao invés de atribuir direto
+	*/
+
+	private int horas;
+	private int minutos;
+	private int segundos;
+
+	public Horario (){
+		horas = minutos = segundos = 0;
+	}
+
+	public Horario (int h, int m, int s) {
+		setHoras(h);
+		setMinutos(m);
+		setSegundos(s);
+	}
+	
+/*
 Tarefa 02
 
 ● No mesmo projeto:
@@ -21,17 +47,7 @@ SOLUÇÃO:
 	return out;
 	}
 
-/*
-	Tarefa 03
 
-● No mesmo projeto:
-○ Crie na classe Horario:
-■ Um construtor sem parâmetros que inicialize o objeto com
-00:00:00
-■ Um construtor parametrizado que inicialize o objeto com os
-valores de horas, min e seg informados nos parâmetros
-■ Use os métodos set ao invés de atribuir direto
-	*/
 
   
 }
