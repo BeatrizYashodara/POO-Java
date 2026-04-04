@@ -1,0 +1,34 @@
+03/03/2026 
+3 - Sintaxe básica do Java, tipos de dados, laços de repetição.
+
+Objetivo: O objetivo desta tarefa é aplicar e consolidar os conceitos fundamentais da linguagem Java aprendidos em aula. Você irá praticar:
+
+A declaração e manipulação de variáveis.
+A recepção de dados do usuário via Scanner.
+O controle de fluxo do programa com if, else if e else.
+A criação de um menu interativo com um laço de repetição (while ou do-while).
+
+Descrição do Projeto: Você deverá criar um programa em Java que simule as operações básicas de um caixa eletrônico. O programa deve ser executado no console e apresentar um menu de opções para o usuário. A aplicação continuará rodando e exibindo o menu até que o usuário escolha a opção "Sair".
+
+Estrutura do Código (Dicas):
+
+Use um laço while ou do-while para manter o menu ativo. A condição de parada do laço será quando a opção do usuário for 4.
+Dentro do laço, use uma estrutura if-else if-else ou, melhor ainda, um switch para tratar a opção escolhida pelo usuário.
+Não se esqueça de declarar a variável saldo fora do loop, caso contrário, seu valor será resetado a cada nova iteração!
+
+Requisitos Funcionais:
+
+Saldo Inicial: O programa deve começar com uma variável double saldo inicializada com um valor pré-definido (ex: R$ 2.500,00).
+Menu de Opções: A cada iteração, o programa deve limpar a tela (opcional) e exibir um menu com as opções:
+2.1 - Opção 1:
+Consultar Saldo: Se o usuário digitar 1, o programa deve exibir o valor atual da variável saldo
+2.2 - Opção 2: 
+Receber Valor (Depósito): Se o usuário digitar 2, o programa deve perguntar qual valor ele deseja depositar. Em seguida, o valor informado deve ser somado ao saldo.
+2.3 - Opção 3:
+Transferir Valor (Saque): Se o usuário digitar 3, o programa deve perguntar qual valor ele deseja sacar, Antes de efetuar o saque, o programa deve verificar se o valor a ser sacado é menor ou igual ao saldo disponível.
+Se o saldo for suficiente, o valor do saque deve ser subtraído do saldo.
+Se o saldo for insuficiente, o programa deve exibir uma mensagem de "Saldo insuficiente"
+2.4 - Opção 4:
+Sair: Se o usuário digitar 4, o programa deve exibir uma mensagem de despedida e encerrar a execução.
+2.5 - Opção Inválida: 
+Se o usuário digitar qualquer outra coisa, o programa deve exibir uma mensagem de "Opção inválida" e mostrar o menu novamente.
