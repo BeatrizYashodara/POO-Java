@@ -1,0 +1,9 @@
+17/03/2026
+5 - Objetos, instâncias e construtores
+
+Objetivo: Criar um projeto de aplicação que apresente um
+QUIZ (tema livre) com 10 questões:
+● Os dados devem ser gravados em objetos de memória
+como ArrayList ou HashMap
+● Ao final do QUIZ, deve ser apresentada a média de
+acertos
