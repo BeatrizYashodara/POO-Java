@@ -37,8 +37,56 @@ SOLUÇÃO: */
 	return out;
 	}
 
+/*
+Tarefa 04
 
+● No mesmo projeto:
+○ Crie na classe Data:
+■ Crie um método chamado isBissexto() que retorne true se o ano da data é
+bissexto ou false caso contrário
 
-	
+○ Crie na classe Horário:
+■ Crie um método chamado isManhã() que retorne true se o horário está entre 6h e
+12h e false caso contrário
+■ Crie um método chamado isTarde() que retorne true se o horário está entre 12h e
+18h e false caso contrário
+■ Crie um método chamado isNoite() que retorne true se o horário está entre 18h e
+0h e false caso contrário
+■ Crie um método chamado isMadrugada() que retorne true se o horário está entre
+0h e 6h e false caso contrário
+	*/
+
+	public boolean isBissexto(){
+		if(ano % 400 == 0)
+			return true;
+		else {
+			if (ano % 100 == 0)
+			return false;
+			else if (ano % 4 == 0)
+				return true;
+			else
+				return false;
+		}
+	}
+
+	public boolean isMadrugada() {
+		if(horas >= 0 && horas < 6) return true;
+		else return false;
+	}
+
+	public boolean isManha() {
+		if(horas >= 6 && horas < 12) return true;
+		else return false;
+	}
+
+	public boolean isTarde() {
+		if (horas >= 12 && horas < 18) return true;
+		else return false;
+	}
+
+	public boolean isNoite() {
+		if(horas >= 18 && horas < 24) return true;
+		else return false;
+	}
 	
 }
