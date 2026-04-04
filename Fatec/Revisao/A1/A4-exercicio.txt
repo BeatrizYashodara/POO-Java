@@ -1,0 +1,12 @@
+10/03/2026
+4 - Classes, Atributos e Métodos
+
+Objetivo: Reescrever a tarefa da aula anterior utilizando orientação a objetos:
+
+Crie a classe Conta com um atributo para o saldo e os métodos:
+
+double consultar()
+void depositar(double valor)
+void sacar(double valor)
+
+Crie a classe App com o método main instanciando um objeto da classe Conta e implementando a interface de menu para manipular o saldo.
