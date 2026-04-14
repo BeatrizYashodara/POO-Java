@@ -1,0 +1,104 @@
+E aí, Beatriz! Que bom te ver por aqui. Vamos nessa revisão da sua P1? Você mandou bem, tirou 80% (16/20), mas 
+vamos focar nos pontos que erraram pra reforçar e garantir que você domine tudo. Vou explicar cada questão errada 
+passo a passo, com exemplos e dicas pra fixar. Se tiver dúvidas ou quiser exemplos extras, é só falar! Vamos começar?
+
+Questão 14: Atributos de Classe (static)
+Código:
+
+
+java
+public class Usuario {
+    public static int contador = 0;
+
+    public Usuario() {
+        contador++;
+    }
+}
+
+public class App {
+    public static void main(String[] args) {
+        Usuario u1 = new Usuario();
+        Usuario u2 = new Usuario();
+        Usuario u3 = new Usuario();
+        System.out.println(Usuario.contador);
+    }
+}
+
+Sua resposta: "Um erro de compilação, pois contador não pode ser acessado dessa forma."
+Correta: 3 (imprime 3).
+
+Por quê? Atributos static pertencem à classe, não às instâncias. Você acessa via Classe.atributo (ex: Usuario.contador). 
+Cada new Usuario() incrementa o contador compartilhado. É como um contador global da classe. Dica: Pense em static como 
+"comum a todos os objetos" – útil pra constantes ou contadores globais.
+
+Questão 15: Comparação de Strings
+Código:
+
+
+java
+public class App {
+    public static void main(String[] args) {
+        String nome1 = new String("Java");
+        String nome2 = new String("Java");
+
+        System.out.println(nome1 == nome2);
+    }
+}
+
+Sua resposta: TRUE
+Correta: false
+
+Por quê? O operador == compara referências (endereços de memória), não conteúdo. Mesmo que as strings sejam iguais, 
+new String() cria objetos diferentes. Use .equals() pra comparar conteúdo: nome1.equals(nome2) retorna true. 
+Dica: Sempre use .equals() pra strings – == é pra primitivos ou objetos idênticos.
+
+Questão 17: Classes Abstratas
+Código:
+
+
+java
+public abstract class Veiculo {
+    public abstract void acelerar();
+}
+
+public class Carro extends Veiculo {
+    // Nenhum método implementado aqui
+}
+
+Sua resposta: "O método acelerar() será herdado com um corpo vazio."
+Correta: Erro de compilação (Carro deve implementar acelerar()).
+
+Por quê? Classes abstratas não podem ser instanciadas e forçam subclasses a implementar métodos abstratos. Se não implementar,
+dá erro. 
+É como um "contrato" – a subclasse deve cumprir. Dica: Abstratas servem pra modelos genéricos (ex: Veículo), e subclasses 
+concretas (ex: Carro) implementam os detalhes.
+
+Questão 20: Herança e Atributos
+Código:
+
+
+java
+public class Pai {
+    String nome = "Pai";
+}
+
+public class Filho extends Pai {
+    String nome = "Filho";
+}
+
+public class App {
+    public static void main(String[] args) {
+        Pai p = new Filho();
+        System.out.println(p.nome);
+    }
+}
+
+Sua resposta: "Um erro de compilação, pois há ambiguidade no atributo nome."
+Correta: "Pai"
+
+Por quê? Em herança, atributos são acessados pelo tipo da referência (Pai), não pelo objeto real (Filho). O atributo nome de 
+Filho "sombra" o de Pai, mas aqui acessamos o de Pai. Pra acessar o de Filho, precisaria de ((Filho)p).nome. 
+Dica: Herança é pra comportamentos (métodos), não atributos – evite sombreamento pra não confundir.
+
+E aí, fez sentido? Quer que eu crie um quiz rápido em HTML/JS pra testar esses conceitos, ou um mapa mental sobre 
+herança e polimorfismo? Ou prefere focar em outro tópico? Vamos reforçar pra você arrasar na próxima! 😎
